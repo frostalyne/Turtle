@@ -35,7 +35,7 @@ public class World extends JComponent implements ModelDisplay {
     private List<Turtle> turtleList = new ArrayList<Turtle>();
 
     /** the JFrame to show this world in */
-    private JFrame frame = new JFrame("World");
+    private JFrame frame = new JFrame("very cool World");
 
     /** background picture */
     private Picture picture = null;
