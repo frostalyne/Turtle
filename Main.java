@@ -38,6 +38,24 @@ public class Main {
 
 
     hurdle.asterisk(50);
+
+    yertle.setName("yertle");
+    purdle.setName("purdle");
+    hurdle.setName("hurdle");
+
+    System.out.println(yertle.getName());
+    System.out.println(purdle.getName());
+    System.out.println(hurdle.getName());
+    System.out.println(yertle.getShellColor());
+    System.out.println(purdle.getShellColor());
+    System.out.println(hurdle.getShellColor());
+    System.out.println("i, yertle drew a star");
+    System.out.println("i, purdle drew a spiral");
+    System.out.println("i, hurdle drew a square and an asterisk");
+    System.out.println(yertle.getDistance(0,0));
+    System.out.println(purdle.getDistance(0,0));
+    System.out.println(hurdle.getDistance(0,0));
+
     // //world.setVisible(true);
 
     // World world2 = new World(true);
