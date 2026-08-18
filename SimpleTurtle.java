@@ -1,9 +1,5 @@
-import javax.swing.*; 
 import java.awt.*;
-import java.awt.font.*;
 import java.awt.geom.*;
-import java.util.Observer;
-import java.util.Random;
 
 /**
  * Class that represents a Logo-style turtle.  The turtle
@@ -158,6 +154,7 @@ public class SimpleTurtle
     int xDiff = x - xPos;
     int yDiff = y - yPos;
     return (Math.sqrt((xDiff * xDiff) + (yDiff * yDiff)));
+
   }
   
   /**
@@ -686,6 +683,59 @@ public class SimpleTurtle
     g.drawString(this.toString(),xPos + (int) (width/2),yPos);
   }
   
+  public void polygon(double sides, int size)
+  {
+    for (int i=0; i<sides; i++)
+    {
+      this.forward(size);
+      this.turn(360.0/sides);
+    }
+  }
+
+  public void circle(int radius)
+  {
+    int circumference = (int) (2 * Math.PI * radius);
+    this.polygon(circumference, 1);
+  }
+
+  public void star(int points, int size)
+  {
+    for (int i=0; i<points; i++)
+    {
+      this.forward(size);
+      this.turn(180 - (180.0/points));
+    }
+  }
+
+  public void spiral(int turns, int size)
+  {
+    for (int i=0; i<turns; i++)
+    {
+      this.forward(size);
+      this.turn(30);
+      size += 5;
+    }
+  }
+
+  public void square(int size)
+  {
+    for (int i=0; i<4; i++)
+    {
+      this.forward(size);
+      this.turn(90);
+    }
+  }
+
+  public void asterisk(int size)
+  {
+    for (int i=0; i<8; i++)
+    {
+      this.forward(size);
+      this.backward(size);
+      this.turn(45);
+    }
+  }
+
   /**
    * Method to return a string with informaiton 
    * about this turtle

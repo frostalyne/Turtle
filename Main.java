@@ -1,3 +1,4 @@
+import java.awt.Color;
 
 public class Main {
   public static void main(String[] args) {  
@@ -7,15 +8,36 @@ public class Main {
    
      
     Turtle yertle = new Turtle(world);
-    Turtle purdle = new Turtle(100,200,world2);
+    Turtle purdle = new Turtle(100,200,world);
     Turtle hurdle = new Turtle(200,250,world3);
-
     // // Add your code here
-    yertle.forward();
-    yertle.turnRight();
-    yertle.forward();
 
-  
+    // yertle.setShellColor(Color.blue);
+    // yertle.setColor(Color.red);
+    // System.out.println(hurdle.getShellColor());
+    // yertle.setPenWidth(10); 
+    // yertle.forward();
+    // yertle.turnRight();
+    // yertle.forward();
+    // yertle.turnRight();
+    // yertle.forward();
+    // yertle.turnRight();
+    // yertle.forward();
+    // yertle.turnRight();
+
+    // purdle.turnToFace(yertle);
+
+    yertle.star(5,50);
+    purdle.spiral(10, 5);
+    
+    hurdle.square(50);
+    
+    hurdle.penUp();
+    hurdle.forward(200);
+    hurdle.penDown();
+
+
+    hurdle.asterisk(50);
     // //world.setVisible(true);
 
     // World world2 = new World(true);
